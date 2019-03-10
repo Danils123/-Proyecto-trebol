@@ -1,0 +1,70 @@
+entity Category {
+	id Long
+	name String
+    description String
+}
+
+entity SubCategory {
+	name String
+    description String
+}
+
+entity Product {
+	barCode String
+    name String
+    brand String
+    description String
+    image String
+}
+
+entity Inventory {
+}
+
+entity Commerce {
+	identification Integer
+    name String
+    address String
+	latitude String
+    longitude String
+	email String
+    ranking Integer
+    photograph String
+    state Integer
+    phone String
+} 
+
+entity ScheduleCommerce {
+	day String
+    openTime String
+    closingTime String
+}
+
+relationship OneToMany {
+	Category{product} to Product,
+	SubCategory{product} to Product
+}
+
+relationship OneToOne {
+	Commerce{inventory} to Inventory
+}
+
+relationship OneToOne {
+	Commerce{schedule} to ScheduleCommerce
+}
+
+relationship ManyToMany {
+	Inventory{product} to Product{inventory}
+}
+
+// Set pagination options
+paginate Product with infinite-scroll
+paginate SubCategory, Category with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+// service all with serviceImpl except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

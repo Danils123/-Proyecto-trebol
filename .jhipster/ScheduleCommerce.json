@@ -1,0 +1,27 @@
+{
+    "name": "ScheduleCommerce",
+    "fields": [
+        {
+            "fieldName": "day",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "openTime",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "closingTime",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190310184337",
+    "entityTableName": "schedule_commerce",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

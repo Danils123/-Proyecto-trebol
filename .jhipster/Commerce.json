@@ -1,0 +1,72 @@
+{
+    "name": "Commerce",
+    "fields": [
+        {
+            "fieldName": "identification",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "latitude",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "longitude",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ranking",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "photograph",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "inventory",
+            "otherEntityRelationshipName": "commerce",
+            "relationshipName": "inventory",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "scheduleCommerce",
+            "otherEntityRelationshipName": "commerce",
+            "relationshipName": "schedule",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190310184336",
+    "entityTableName": "commerce",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

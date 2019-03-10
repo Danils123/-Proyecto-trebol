@@ -40,6 +40,16 @@ public class CacheConfiguration {
             cm.createCache(com.cenfotec.trebol.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(com.cenfotec.trebol.domain.PersistentToken.class.getName(), jcacheConfiguration);
             cm.createCache(com.cenfotec.trebol.domain.User.class.getName() + ".persistentTokens", jcacheConfiguration);
+            cm.createCache(com.cenfotec.trebol.domain.Category.class.getName(), jcacheConfiguration);
+            cm.createCache(com.cenfotec.trebol.domain.Category.class.getName() + ".products", jcacheConfiguration);
+            cm.createCache(com.cenfotec.trebol.domain.SubCategory.class.getName(), jcacheConfiguration);
+            cm.createCache(com.cenfotec.trebol.domain.SubCategory.class.getName() + ".products", jcacheConfiguration);
+            cm.createCache(com.cenfotec.trebol.domain.Product.class.getName(), jcacheConfiguration);
+            cm.createCache(com.cenfotec.trebol.domain.Product.class.getName() + ".inventories", jcacheConfiguration);
+            cm.createCache(com.cenfotec.trebol.domain.Inventory.class.getName(), jcacheConfiguration);
+            cm.createCache(com.cenfotec.trebol.domain.Inventory.class.getName() + ".products", jcacheConfiguration);
+            cm.createCache(com.cenfotec.trebol.domain.Commerce.class.getName(), jcacheConfiguration);
+            cm.createCache(com.cenfotec.trebol.domain.ScheduleCommerce.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
